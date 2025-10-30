@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
+import Navbar  from "../components/navbar";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
     { name: "description", content: "Welcome to React Router!" },
@@ -9,8 +10,14 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+    <Navbar/>
+    <div id="home-content">      
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+      
+    </div>
+    </>    
   )
 }
